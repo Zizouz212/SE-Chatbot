@@ -5,7 +5,7 @@ Points = {
 
 def change_points(user, amount):
     if user not in Points:
-        Points.user = 0
+        Points[user] = 0
     if (Points.user + amount) < 0:
         return "Can't perform an action that would take the total for " + user + " under 0."
     else:
