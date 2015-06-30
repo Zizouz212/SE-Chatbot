@@ -263,6 +263,7 @@ class Chatbot:
             return "Command not found."
                 
     def command_stop(self, args, msg, event):
+    	SaveIO.save(SaveIO.path, Points.Points)
         self.enabled = False
         self.running = False
         if msg is not None:
