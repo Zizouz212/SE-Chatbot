@@ -39,7 +39,7 @@ def get_points(args, msg, event):
         user = event.user.name
     elif len(args) >= 2:
         user = args[1]
-    if hasattr(Points, user):
+    if user in Points:
         return str(Points[user])
     else:
         return "0"
