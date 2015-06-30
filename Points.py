@@ -8,7 +8,8 @@ Points = {
 }
 
 def init():
-    Points = SaveIO.load(SaveIO.path)
+	global Points
+	Points = SaveIO.load(SaveIO.path)
 
 def close():
     SaveIO.save(SaveIO.path, Points)
