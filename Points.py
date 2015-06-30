@@ -15,9 +15,11 @@ def close():
     global Points
     SaveIO.save(SaveIO.path, Points)
 
-def change_points(user, amount):
+def change_points(user, amount, is_admin):
     if user not in Points:
         Points[user] = 200
+    if (Points[user] + amount) < 0 and not is_admin:
+        return False
     else:
         Points[user] += amount
         return "Changed points for " + user + " by " + str(amount) + ". New total: " + str(Points[user])
@@ -65,7 +67,7 @@ def admin_points(args, msg, event):
     except:
         return "Invalid amount."
 
-    result = change_points(user, amount)
+    result = change_points(user, amount, True)
     return result
     
 def get_points(args, msg, event):
