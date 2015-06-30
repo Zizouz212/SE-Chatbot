@@ -11,8 +11,10 @@ class Config:
     }
     
     Configurations = { # Optional, add configurations here
-        "site": "stackexchange.com",
-        "room": 25323,
+        "dev": {
+            "site": "stackexchange.com",
+            "room": 25323
+        }
     }
 
     

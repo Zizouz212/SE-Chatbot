@@ -18,8 +18,6 @@ def close():
 def change_points(user, amount):
     if user not in Points:
         Points[user] = 200
-    if (Points[user] + amount) < 0:
-        return False
     else:
         Points[user] += amount
         return "Changed points for " + user + " by " + str(amount) + ". New total: " + str(Points[user])
