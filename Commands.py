@@ -69,9 +69,9 @@ def command_xkcd(args, msg, event):
     return "http://xkcd.com/%i/" % id_
     
 def command_points(args, msg, event):
-    if len(args) < 2:
-		return "Not enough arguments."
-	if args[1] == "give":
-		return Points.give_points(args, msg, event)
-	elif args[1] == "get":
-		return Points.get_points(args, msg, event)
+    if len(args) < 1:
+        return "Not enough arguments."
+    if args[0] == "give":
+        return Points.give_points(args, msg, event)
+    elif args[0] == "get":
+        return Points.get_points(args, msg, event)
