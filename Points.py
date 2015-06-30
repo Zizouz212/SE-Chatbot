@@ -6,11 +6,11 @@ Points = {
 def change_points(user, amount):
     if user not in Points:
         Points[user] = 0
-    if (Points.user + amount) < 0:
+    if (Points[user] + amount) < 0:
         return "Can't perform an action that would take the total for " + user + " under 0."
     else:
-        Points.user += amount
-        return "Changed points for " + user + " by " + str(amount) + ". New total: " + str(Points.user)
+        Points[user] += amount
+        return "Changed points for " + user + " by " + str(amount) + ". New total: " + str(Points[user])
         
 def give_points(args, msg, event):
     if len(args) < 3:
@@ -39,7 +39,7 @@ def get_points(args, msg, event):
     elif len(args) >= 2:
         user = args[1]
     if hasattr(Points, user):
-        return Points.user
+        return Points[user]
     else:
         return 0
 
