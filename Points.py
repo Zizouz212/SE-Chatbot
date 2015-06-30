@@ -12,6 +12,7 @@ def init():
 	Points = SaveIO.load(SaveIO.path)
 
 def close():
+	global Points
     SaveIO.save(SaveIO.path, Points)
 
 def change_points(user, amount):
