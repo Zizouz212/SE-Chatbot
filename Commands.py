@@ -2,6 +2,7 @@
 import random
 import sys
 from datetime import datetime
+import Points
 
 
 def command_alive(args, msg, event):
@@ -66,6 +67,11 @@ def command_xkcd(args, msg, event):
     except:
         return "Invalid arguments."
     return "http://xkcd.com/%i/" % id_
-	
+    
 def command_points(args, msg, event):
-	return event.user.name
+    if len(args) < 2:
+		return "Not enough arguments."
+	if args[1] == "give":
+		return Points.give_points(args, msg, event)
+	elif args[1] == "get":
+		return Points.get_points(args, msg, event)
