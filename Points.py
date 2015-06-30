@@ -1,13 +1,16 @@
+from Config import Config
+
 Points = {
     # "username": 100
     # Format is key username: value points
+	"KarmaBot": 9999999999999999999999
 }
 
 def change_points(user, amount):
     if user not in Points:
-        Points[user] = 0
+        Points[user] = 200
     if (Points[user] + amount) < 0:
-        return "Can't perform an action that would take the total for " + user + " under 0."
+        return False
     else:
         Points[user] += amount
         return "Changed points for " + user + " by " + str(amount) + ". New total: " + str(Points[user])
@@ -29,8 +32,10 @@ def give_points(args, msg, event):
     negAmount = -amount;
     negUser = event.user.name
     
+    remove = change_points(negUser, negAmount)
+    if remove == False:
+        return "You do not have enough points to give that many away."
     result = change_points(user, amount)
-    change_points(negUser, negAmount)
     return result
     
 def get_points(args, msg, event):
@@ -42,5 +47,6 @@ def get_points(args, msg, event):
     if user in Points:
         return str(Points[user])
     else:
-        return "0"
+        Points[user] = 200
+        return "200"
 

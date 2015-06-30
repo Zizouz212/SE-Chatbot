@@ -17,6 +17,8 @@ import pickle
 from CommandHelp import CommandHelp
 from Config import Config
 import Commands
+import SaveIO
+import Points
 
 
 class Chatbot:
