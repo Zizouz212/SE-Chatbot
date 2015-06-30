@@ -61,7 +61,8 @@ class Chatbot:
             'xkcdrandomnumber': Commands.command_xkcdrandomnumber,
             'xkcd': Commands.command_xkcd,
             'alive': Commands.command_alive,
-            'utc': Commands.command_utc
+            'utc': Commands.command_utc,
+			'points': Commands.command_points
         }
         self.shadows_den_specific_commands = {
             'time': self.command_time,

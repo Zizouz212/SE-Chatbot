@@ -66,3 +66,6 @@ def command_xkcd(args, msg, event):
     except:
         return "Invalid arguments."
     return "http://xkcd.com/%i/" % id_
+	
+def command_points(args, msg, event):
+	return event.user.name
