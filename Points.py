@@ -29,8 +29,9 @@ def give_points(args, msg, event):
     negAmount = -amount;
     negUser = event.user.name
     
-    change_points(user, amount)
+    result = change_points(user, amount)
     change_points(negUser, negAmount)
+	return result
     
 def get_points(args, msg, event):
     user = ""
