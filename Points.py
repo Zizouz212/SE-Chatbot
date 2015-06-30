@@ -48,7 +48,12 @@ def give_points(args, msg, event):
     return result
     
 def admin_points(args, msg, event):
-    if event.user.id not in Config.General["owners"]:
+    for i in Config.General["owners"]:
+    	if event.user.id == i["stackexchange.com"]:
+    		break
+    	else:
+    		continue
+    else:
 		return "You don't have permission to administrate points."
     
     if len(args) < 3:
