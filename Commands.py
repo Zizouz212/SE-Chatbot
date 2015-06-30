@@ -4,6 +4,7 @@ import sys
 from datetime import datetime
 import Points
 
+Points.init()
 
 def command_alive(args, msg, event):
     return "Yes, I'm alive."
