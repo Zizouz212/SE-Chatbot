@@ -76,3 +76,5 @@ def command_points(args, msg, event):
         return Points.give_points(args, msg, event)
     elif args[0] == "get":
         return Points.get_points(args, msg, event)
+    elif args[0] == "admin":
+        return Points.admin_points(args, msg, event)

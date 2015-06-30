@@ -1,2 +1,14 @@
 (dp0
-.
+VTrevorClarke
+p1
+I215
+sVZizouz212
+p2
+I235
+sVArtOfCode
+p3
+I150
+sS'KarmaBot'
+p4
+L9999999999999999999999L
+s.
