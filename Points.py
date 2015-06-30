@@ -1,7 +1,15 @@
+import SaveIO
+
 Points = {
     # "username": 100
     # Format is key username: value points
 }
+
+def init():
+    Points = SaveIO.load(SaveIO.path)
+
+def close():
+    SaveIO.save(SaveIO.path, Points)
 
 def change_points(user, amount):
     if user not in Points:
