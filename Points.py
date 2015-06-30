@@ -20,7 +20,7 @@ def give_points(args, msg, event):
     amount = args[2]
     
     if "-" in amount:
-        return "You cannot take points from another user."
+        return "You cannot take points from a user."
     try:
         amount = int(amount)
     except:
@@ -40,7 +40,7 @@ def get_points(args, msg, event):
     elif len(args) >= 2:
         user = args[1]
     if hasattr(Points, user):
-        return Points[user]
+        return str(Points[user])
     else:
-        return 0
+        return "0"
 
