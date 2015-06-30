@@ -15,11 +15,12 @@ def close():
     global Points
     SaveIO.save(SaveIO.path, Points)
 
-def change_points(user, amount, is_admin):
+def change_points(user, amount, is_admin=False):
     if user not in Points:
         Points[user] = 200
-    if (Points[user] + amount) < 0 and not is_admin:
-        return False
+    if not is_admin:
+        if Points[user] + amount < 0:
+            return False
     else:
         Points[user] += amount
         return "Changed points for " + user + " by " + str(amount) + ". New total: " + str(Points[user])
@@ -49,12 +50,12 @@ def give_points(args, msg, event):
     
 def admin_points(args, msg, event):
     for i in Config.General["owners"]:
-    	if event.user.id == i["stackexchange.com"]:
-    		break
-    	else:
-    		continue
+        if event.user.id == i["stackexchange.com"]:
+            break
+        else:
+            continue
     else:
-		return "You don't have permission to administrate points."
+        return "You don't have permission to administrate points."
     
     if len(args) < 3:
         return "Not enough arguments."
