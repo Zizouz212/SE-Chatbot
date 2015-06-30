@@ -1,14 +1,12 @@
-# FOX 9000, a chat bot for the Stack Exchange chat rooms. #
+# KarmaBot #
 
-A chat bot for the Stack Exchange chat rooms. Mainly for the chat.meta.stackexchange.com chat room Shadow's Den, but can also be used in other rooms.
-
-The bot is licensed under [CPOL (The Code Project Open License) v1.02](http://www.codeproject.com/info/cpol10.aspx). You can find a copy of this license in `LICENSE.htm`.
+This is the repository for KarmaBot, a bot for Open Source Stack Exchange that remembers how many \o/ points you have.
 
 ### Setup ###
 
 Before you can use the bot, you need to install some dependencies such as ChatExchange and BeautifulSoup4. You can install them by running `setup.sh`.
 
-You'll also need to rename `ConfigTemplate.py` to `Config.py` and `SecretSpellsTemplate.py` to `SecretSpells.py`. Spells are a Shadow's Den feature, but as they are secret, I only post a template here, not the real spells.
+You'll also need to rename `ConfigTemplate.py` to `Config.py`.
 
 You will also need to add some required configuration data in `Config.py`. The comments in that file tell you which values you can add and how to add them.
 
