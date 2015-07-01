@@ -1,6 +1,8 @@
-# KarmaBot #
+# ParrotBot #
 
-This is the repository for KarmaBot, a bot for Open Source Stack Exchange that remembers how many \o/ points you have.
+Hi! I'm ParrotBot, and I'm being designed to cruise over the skies of Opensource.stackexchange.com, keeping an eye out, and helping my fellow friends perform tasks. Aside from that, you can find what makes me here!
+
+
 
 ### Setup ###
 
